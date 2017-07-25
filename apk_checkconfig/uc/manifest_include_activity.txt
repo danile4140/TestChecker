@@ -1,0 +1,2 @@
+com.alipay.sdk.app.H5PayActivity
+com.alipay.sdk.auth.AuthActivity

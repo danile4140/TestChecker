@@ -1,0 +1,2 @@
+android.permission.GET_TASKS
+com.xiaomi.sdk.permission.PAYMENT

@@ -1,0 +1,3 @@
+# 格式: tag_name, name, attribute, value
+# value：packagename(配置项需要为packagename)
+provider, com.duoku.platform.download.DownloadProvider, authorities, packagename

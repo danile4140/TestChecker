@@ -1,0 +1,4 @@
+com.baidu.android.pushservice.PushService
+com.baidu.android.pushservice.CommandService
+com.duoku.platform.download.DownloadService
+com.baidu.platformsdk.BDPlatformService

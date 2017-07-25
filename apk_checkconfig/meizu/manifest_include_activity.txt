@@ -1,0 +1,7 @@
+com.meizu.atlas.server.am.ProxyActivity
+com.meizu.atlas.server.am.OrientationLProxyActivity
+com.meizu.atlas.server.am.OrientationPProxyActivity
+com.meizu.atlas.server.am.TranslucentProxyActivity
+com.meizu.atlas.server.am.ConfigChangesProxyActivity
+com.meizu.atlas.server.am.TranslCfgChangesProxyActivity
+com.meizu.gamesdk.update.UpdateActivity

@@ -1,0 +1,5 @@
+assets/data.bin
+lib/.*?/libentryexpro.so                                                                         
+lib/.*?/libuptsmaddon.so
+lib/.*?/libvivo_account_sdk.so
+lib/.*?/libvivo_sdk_wave.so

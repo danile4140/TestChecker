@@ -1,0 +1,14 @@
+ vivo.game.permission.OPEN_JUMP_INTENTS
+ android.permission.CHANGE_NETWORK_STATE
+ android.permission.ACCESS_WIFI_STATE
+ android.permission.GET_ACCOUNTS
+ android.permission.INTERNET
+ android.permission.SYSTEM_ALERT_WINDOW
+ android.permission.ACCESS_NETWORK_STATE
+ android.permission.READ_PHONE_STATE
+ android.permission.RECEIVE_SMS
+ android.permission.SEND_SMS
+ android.permission.WRITE_EXTERNAL_STORAGE
+ android.permission.READ_EXTERNAL_STORAGE
+ android.permission.GET_TASKS
+ com.bbk.account.permission.READ_ACCOUNTINFO

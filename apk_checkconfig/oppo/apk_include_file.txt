@@ -1,0 +1,1 @@
+assets/nearme/oppo_game_service_\d*?.so

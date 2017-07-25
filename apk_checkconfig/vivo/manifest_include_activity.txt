@@ -1,0 +1,7 @@
+com.vivo.unionsdk.ui.UnionActivity
+.wxapi.WXPayEntryActivity
+com.vivo.sdkplugin.payment.qqpay.VivoQQPayResultActivity
+com.unionpay.uppay.PayActivity
+com.unionpay.UPPayWapActivity
+com.alipay.sdk.app.H5PayActivity
+com.alipay.sdk.auth.AuthActivity

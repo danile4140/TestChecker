@@ -1,0 +1,4 @@
+assets/bdpwxpayplugin.apk
+assets/data.bin
+assets/open_sdk_file.dat
+assets/service.cfg

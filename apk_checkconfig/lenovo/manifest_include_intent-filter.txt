@@ -1,0 +1,9 @@
+# 格式: tag_name, name, attribute, compare_flag（匹配标记）, value（匹配值）
+# compare_flag：1(匹配值 = packagename)
+#               2(匹配值 = str + packagename)
+#               3(匹配值 = packagename + str)
+#               4(匹配值 = get_element(tag_name, name, attribute))
+#               5(匹配值 = str)
+receiver, com.lenovo.lsf.gamesdk.receiver.GameSdkReceiver, action, 4, meta-data, lenovo.open.appid, value
+receiver, com.lenovo.lsf.gamesdk.receiver.GameSdkReceiver, category, 1, packagename
+receiver, com.lenovo.lsf.gamesdk.receiver.GameSdkAndroidLReceiver, category, 1, packagename

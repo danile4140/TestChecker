@@ -1,0 +1,6 @@
+com.huawei.gameservice.sdk.view.dialog.NoticeActivity
+com.huawei.gameservice.sdk.view.dialog.UpdateActivity
+com.huawei.gameservice.sdk.view.dialog.BaseDialogActivity
+com.huawei.gameservice.sdk.view.dialog.DownloadProgressDialogActivity
+com.huawei.gameservice.sdk.view.SplashImageActivity
+com.huawei.gameservice.sdk.view.DummyActivity

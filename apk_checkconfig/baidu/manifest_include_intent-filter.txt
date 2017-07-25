@@ -1,0 +1,7 @@
+# 格式: tag_name, name, attribute, compare_flag（匹配标记）, str（匹配字符串）
+# compare_flag：1(匹配值 = packagename)
+#               2(匹配值 = str + packagename)
+#               3(匹配值 = packagename + str)
+#               4(匹配值 = appid)
+#               5(匹配值 = str)
+activity, com.baidu.platformsdk.pay.channel.qqwallet.QQPayActivity, data, 2, qwallet

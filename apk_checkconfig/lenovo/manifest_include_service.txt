@@ -1,0 +1,3 @@
+com.lenovo.lsf.lenovoid.toolbar.AppCheckService
+com.lenovo.lsf.push.service.PushService
+com.lenovo.lsf.push.ui.DisplayService

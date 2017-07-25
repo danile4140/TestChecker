@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AppStore预审核</title>
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="shortcut icon" href="/static/res/favicon.ico">
+    <!--<link rel="stylesheet" href="https://fonts.useso.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.useso.com/icon?family=Material+Icons">-->
+    <link rel="stylesheet" href="/static/res/css/material.min.css">
+    <link rel="stylesheet" href="/static/res/css/dropzone.min.css">
+    <link rel="stylesheet" href="/static/res/css/styles.css">
+    <style type="text/css">
+        #ipa_file {
+            border: 2px solid rgb(66, 158, 158);
+            width: 100%;
+        }
+
+        #overview section {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+            <a href="#overview" class="mdl-layout__tab is-active">Home</a>
+            <a href="#features" class="mdl-layout__tab">FAQ</a>
+        </div>
+    </header>
+    <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <form action="#" class="dropzone dz-clickable" id="ipa_file" method="post"
+                      enctype="multipart/form-data">
+                    <div class="dz-message">文件拖放到这里或者点击选择ipa文件.<br>
+                        <span class="note">( <strong>开始预审核</strong>)</span>
+                    </div>
+                </form>
+            </section>
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <h4 class="mdl-cell mdl-cell--12-col">App信息</h4>
+                    <ul class="toc">
+                        <a href="#">游戏名: <span id="app_name"></span></a>
+                        <a href="#">版本号: <span id="version"></span></a>
+                        <a href="#">内部版本号: <span id="Internalversion"></span></a>
+                        <a href="#">包名: <span id="bundle_identifier"></span></a>
+                        <a href="#">目标运行系统: <span id="target_os_version"></span></a>
+                        <a href="#">最低运行系统: <span id="minimum_os_version"></span></a>
+                        <a href="#">支持架构: <span id="app_arcs"></span></a>
+                        <a href="#">iPad适配(True为需适配): <span id="app_device"></span></a>
+                        <a href="#">存储共享(False为正常): <span id="app_share"></span></a>
+                        <a href="#">Xcode病毒检查(False为未中毒): <span id="xcode_ghost"></span></a>
+                        <a href="#">ATS开关(True为不通过): <span id="app_http"></span></a>
+                        <a href="#">HealthKit(内容查看FAQ): <span id="app_UIRequiredDeviceCapabilities"></span></a>
+                        <!--<a href="#">证书类型: <span id="profile_type"></span></a>
+                        <a href="#">有效期: <span id="expiration"></span></a>-->
+                        <!--<a href="#">warnings: <span id="warnings"></span></a>-->
+                    </ul>
+                </div>
+            </section>
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="app_background">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <h4 class="mdl-cell mdl-cell--12-col">后台配置</h4>
+                    <span class="note"><small>请确保无以下内容:背景音乐播放功能(关键字:audio)、声明支持VoIP(关键字:Voice over IP)、声明支持蓝牙(关键字:CoreBluetooth)、声明支持GPS(关键字:location)。无内容显示为未配置</small></span>
+                    <div id="app_background_div" class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                    </div>
+                </div>
+            </section>
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="api_in_app">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <h4 class="mdl-cell mdl-cell--12-col">API检查详情</h4>
+                    <span class="note">(<small>下方若有展示内容，请联系开发人员确认是否为重名，无内容显示为正常</small>)</span>
+                    <div id="api_append_div" class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                        <h5 class="mdl-cell mdl-cell--12-col">私有API</h5>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <div id="framework_append_div" class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                        <h5 class="mdl-cell mdl-cell--12-col">私有框架</h5>
+                    </div>
+                </div>
+            </section>
+            <!--<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="waring">
+              <div class="mdl-card mdl-cell mdl-cell--12-col">
+                <div id="framework_append_div3" class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                  <div id="api_append_div1" class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                  <h4 class="mdl-cell mdl-cell--12-col">警告</h4>
+                    <h5 class="mdl-cell mdl-cell--12-col">私有api</h5>
+                    <h5 class="mdl-cell mdl-cell--12-col">私有framework</h5>
+                  </div>
+                </div>
+              </div>
+            </section>-->
+        </div>
+        <div class="mdl-layout__tab-panel" id="features">
+            <section class="section--center mdl-grid mdl-grid--no-spacing">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <h4>FAQ</h4>
+                    iOS预审：苹果在app提审的时候，会检查包体的配置，包括之前无法检查的私有api、数据存储机制，这个工具的目的就是方便大家深入的进行相应内容检查，从而提高审核通过率和工作效率。
+                    <ul class="toc">
+                        <h4>Contents</h4>
+                        <a href="#func">一、功能</a>
+                        <a href="#how">二、如何使用</a>
+                        <a href="#what">三、判断标准</a>
+                        <a href="#note">四、Note</a>
+                    </ul>
+
+                    <h5 id="func">一、功能</h5>
+                    目前功能主要有四：
+                    <ul>
+                        <li>从ipa中提取一些基本信息，例如app名字，sdk版本，包名等，可以辅助QA日常工作。</li>
+                        <li>ipa架构检查，可以看出是否支持64位架构，可以辅助AppStore提审。</li>
+                        <li>ipa功能参数检查，可以看出是否有不符、或违规参数配置，可以辅助AppStore提审。</li>
+                        <li>ipa使用私有api情况，可以辅助AppStore提审。</li>
+                    </ul>
+
+
+                    <h5 id="how">二、如何使用</h5>
+                    <ul>
+                        <li>打开浏览器，输入http://192.168.117.100:9527 将ipa拖入上传框等待片刻即可看到检查结果。</li>
+                    </ul>
+
+                    <h5 id="what">三、判断标准</h5>
+                    <ul>
+                        <li>版本号是正式的版本号，每次过审后再次提交均需变更，需与提测信息核对。内部版本号是编译号，每次编译都需要变更</li>
+                        <li>2017.1.1后不再允许开启ATS开关，若此处检查为True(表示支持Http)，则不通过</li>
+                        <li>iPad标注适配后，请务必验证是否真实适配，若非真实适配则会导致驳回</li>
+                        <li>Healthkit检查，请务必保证声明了healthkit后，游戏有使用到相应功能，不匹配则会被驳回</li>
+                        <li>后台配置，请确保下列内容未开启:背景音乐播放功能（audio）、声明支持VoIP（Voice over
+                            IP）、声明支持蓝牙（CoreBluetooth）、声明支持GPS（location）。
+                        </li>
+                    </ul>
+
+                    <h5 id="note">四、Note</h5>
+                    <p>1. 私有的api包括私有库中的api和公开库中未公开的api和私有api </p>
+                    <p>2. 工具仍在完善中，若有相应需求请及时与Alexander.Zhang联系 </p>
+                </div>
+            </section>
+        </div>
+        <footer class="mdl-mega-footer">
+            <div class="mdl-mega-footer--bottom-section">
+                <div class="mdl-logo">
+                    Dreamsky 2016
+                </div>
+            </div>
+        </footer>
+    </main>
+</div>
+<script type="text/javascript" src="/static/res/js/jquery.min.js"></script>
+<script src="/static/res/js/material.min.js"></script>
+<script src="/static/res/js/dropzone.min.js"></script>
+<script src="/static/res/js/ios_private.js"></script>
+</body>
+</html>

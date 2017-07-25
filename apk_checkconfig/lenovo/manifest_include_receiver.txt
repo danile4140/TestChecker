@@ -1,0 +1,3 @@
+com.lenovo.lsf.gamesdk.receiver.GameSdkReceiver
+com.lenovo.lsf.gamesdk.receiver.GameSdkAndroidLReceiver
+com.lenovo.lsf.push.receiver.PushReceiver

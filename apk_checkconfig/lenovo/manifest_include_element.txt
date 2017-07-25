@@ -1,0 +1,8 @@
+# 格式: tag_name, name, attribute, compare_flag（匹配标记）, str（匹配字符串）
+# compare_flag：1(匹配值 = packagename)
+#               2(匹配值 = str + packagename)
+#               3(匹配值 = packagename + str)
+#               4(匹配值 = get_element(tag_name, name, attribute))
+#               5(匹配值 = str)
+provider, android.support.v4.content.FileProvider, authorities, 3, .fileprovider
+meta-data, lenovo.open.appid, value, 4, meta-data, lenovo:channel, value

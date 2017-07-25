@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>APK静态检查</title>
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-we  b-app-status-bar-style" content="black">
+
+    <link rel="shortcut icon" href="/static/res/android.ico">
+    <!--<link rel="stylesheet" href="https://fonts.useso.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.useso.com/icon?family=Material+Icons">-->
+    <link rel="stylesheet" href="/static/res/css/material.min.css">
+    <link rel="stylesheet" href="/static/res/css/dropzone.min.css">
+    <link rel="stylesheet" href="/static/res/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/res/css/styles.css">
+    <link rel="stylesheet" href="/static/res/css/font-awesome.min.css">
+    <style type="text/css">
+        #apk_file {
+            border: 2px solid rgb(66, 158, 158);
+            width: 100%;
+        }
+
+        #overview section {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            list-style-type: none;
+        }
+        table{
+            margin-left:10px;
+            margin-right:10px;
+        }
+    </style>
+</head>
+<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <!--
+    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+          <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+              <a href="#overview" class="mdl-layout__tab is-active">Home</a>
+           </div>
+     -->
+    </header>
+    <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <form action="http://127.0.0.1:9527/apk_post" class="dropzone dz-clickable" id="apk_file" method="post"
+                      enctype="multipart/form-data">
+                    <div class="dz-message">文件拖放到这里或者点击选择apk文件.<br>
+                        (目前支持渠道：百度、金立、oppo、偶玩、uc、vivo、小米、游龙、联想、魅族、华为)</br>
+                        <span class="note">( <strong>开始检查</strong>)</span>
+                    </div>
+                </form>
+            </section>
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <h4 class="mdl-cell mdl-cell--12-col">Apk信息</h4>
+                    <ul id="apkinfo">
+                        <li style="list-style-type:disc;">游戏名：<strong><span id="appname"></span></strong></li>
+                        <li style="list-style-type:disc;">包  名：<strong><span id="packagename"></span></strong></li>
+                        <li style="list-style-type:disc;">versionCode：<strong><span id="versioncode"></span></strong></li>
+                        <li style="list-style-type:disc;">versionName：<strong><span id="versionname"></span></strong></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="app_background">
+                <div id="check_result" class="mdl-card mdl-cell mdl-cell--12-col">
+                    <h4 id="chk" class="mdl-cell mdl-cell--12-col">检查项</h4>
+                </div>
+            </section>
+        </div>
+        <footer class="mdl-mega-footer">
+            <div class="mdl-mega-footer--bottom-section">
+                <div class="mdl-logo">
+                    Dreamsky 2017
+                </div>
+            </div>
+        </footer>
+    </main>
+</div>
+<script type="text/javascript" src="/static/res/js/jquery.min.js"></script>
+<script src="/static/res/js/material.min.js"></script>
+<script src="/static/res/js/dropzone.min.js"></script>
+<script src="/static/res/js/bootstrap.min.js"></script>
+<script src="/static/res/js/apk_private.js"></script>
+</body>
+</html>

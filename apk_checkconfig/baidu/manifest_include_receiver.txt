@@ -1,0 +1,5 @@
+com.duoku.platform.push.MyPushMessageReceiver
+com.baidu.android.pushservice.PushServiceReceiver
+com.baidu.android.pushservice.RegistrationReceiver
+com.duoku.platform.download.DownloadReceiver
+com.duoku.platform.download.broadcast.AppMonitorReceiver

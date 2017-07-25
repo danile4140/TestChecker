@@ -1,0 +1,2 @@
+lib/.*?/libcfcaMLog.so
+lib/.*?/libSipCryptor.so
