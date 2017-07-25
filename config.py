@@ -22,6 +22,8 @@ sqlite_info = {
 # class_dump_z的路径
 cur_dir = os.getcwd()
 
+# test git
+
 class_dump_z_path = {
     'iphone': os.path.join(cur_dir, 'class_dump_z/iphone_armv6/class-dump-z'),
     'linux': os.path.join(cur_dir, 'class_dump_z/linux_x86/class-dump-z'),
